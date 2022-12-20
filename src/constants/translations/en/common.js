@@ -1,0 +1,73 @@
+export default {
+  Hey: 'Hey',
+  Hellonicetomeetyou: 'Hello nice to meet you!',
+  Getanewexperience: 'Get a new experience',
+  CONTINUE: 'CONTINUE',
+  login: 'Login',
+  password: 'Password',
+  ForgotPassword: 'Forget Password?',
+  send: 'SENT',
+  youareoffline: "Your'e Offline",
+  youareonline: "You're Online",
+  acceptance: 'Acceptance',
+  cancellation: 'Cancellation',
+  details: 'Deails',
+
+  Orderisgettingready: 'Order is getting ready',
+  youhavegotaneworder: 'you have got a new order',
+  Pleasewait: 'Please wait',
+  HeaderUp: 'Header Up!',
+  Pleasewaitfewmintues: 'Please wait few mintues',
+  ViewOrder: 'View Order',
+  OrderDispatched: 'Order Dispatched',
+  accept: 'ACCEPT',
+  reject: 'Reject',
+  OnTheWay: 'On The Way',
+  ContactCustomer: 'Contact Customer',
+  Delivered: 'Delivered',
+  // @Drawer menue Item
+  home: 'Home',
+  profile: 'Profile',
+  orders: 'Orders',
+  settings: 'Settings',
+  logout: 'Logout',
+
+  // @profileScreen
+  MyProfile: 'My Profile',
+  Information: 'Information',
+  Name: 'Name',
+  Phone: 'Phone',
+  Emailaddress: 'Email Address',
+  Gender: 'Gender',
+  DOB: 'DOB',
+  Licence: 'Licence',
+  front: 'Front',
+  Back: 'Back',
+  upload: 'Upload',
+  CivilId: 'Civil ID',
+  // @modlCammerak
+
+  takeaphoto: 'Take a photo',
+  chosefromGallery: 'chose from Gallery',
+
+  // @SettingScreen
+  settings: 'Settings',
+
+  Notifications: 'Notifications',
+  changePassword: 'Change Password',
+  privacyPolicy: 'Privacy Policy',
+  termmsCondition: 'Terms & Condition',
+  aboutus: 'About Us',
+
+  // @OrderDetails
+  restaurant: 'Restaurant',
+  deliveryfee: 'Delivery Fee',
+  orderdetail: 'Order Detail',
+  deal: 'Deal',
+  subtotal: 'Subtotal',
+  total: 'Total',
+  tax: 'Tax',
+  paymentType: 'Payment Type',
+  cashondelivery: 'Cash On Delivery',
+  orderdeliverd: 'Order Delivered',
+};

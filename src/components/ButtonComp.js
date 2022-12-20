@@ -4,11 +4,11 @@ import React from 'react';
 // @Constants
 import {color} from '../theme';
 
-const ButtonComp = () => {
+const ButtonComp = ({onpress, name}) => {
   return (
     <>
-      <TouchableOpacity style={styles.container}>
-        <Text style={styles.txtStyle}>Login</Text>
+      <TouchableOpacity onPress={onpress} style={styles.container}>
+        <Text style={styles.txtStyle}>{name}</Text>
       </TouchableOpacity>
     </>
   );

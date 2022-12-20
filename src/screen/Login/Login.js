@@ -15,7 +15,11 @@ import {color} from '../../theme';
 import TxtInputContainer from '../../components/TxtInputContainer';
 import HeaderComp from '../../components/HeaderComp';
 import ButtonComp from '../../components/ButtonComp';
-const Login = () => {
+
+// @languge convertor
+import {useTranslation} from 'react-i18next';
+const Login = ({navigation}) => {
+  const {t} = useTranslation();
   return (
     <>
       <StatusBar hidden />
@@ -23,16 +27,16 @@ const Login = () => {
         <HeaderComp />
         {/* //Secound main Container Start */}
         <View style={styles.secoundContainer}>
-          <Text style={styles.loginTxt}>Login</Text>
+          <Text style={styles.loginTxt}>{t('common:login')}</Text>
 
           {/* //Input container start */}
           <TxtInputContainer
             icon={require('../../assets/Icons/Group4274.png')}
-            placeholder="Email Address"
+            placeholder={t('common:Emailaddress')}
           />
           <TxtInputContainer
             icon={require('../../assets/Icons/Login.png')}
-            placeholder="Password"
+            placeholder={t('common:password')}
           />
 
           {/* //Input container End */}
@@ -44,13 +48,16 @@ const Login = () => {
                 fontWeight: 'bold',
                 marginVertical: 5,
               }}>
-              Forget Password?
+              {t('common:ForgotPassword')}
             </Text>
           </TouchableOpacity>
 
           {/* //Button */}
           <View style={{marginTop: 50}}>
-            <ButtonComp />
+            <ButtonComp
+              name={t('common:login')}
+              onpress={() => navigation.navigate('BottomTabNavigator')}
+            />
           </View>
         </View>
 
