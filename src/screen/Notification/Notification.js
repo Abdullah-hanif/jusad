@@ -9,8 +9,11 @@ import React from 'react';
 
 // @components
 import NotificationContainer from '../../components/NotificationContainer';
+// @translation
+import {useTranslation} from 'react-i18next';
 
 const Notification = ({navigation}) => {
+  const {t} = useTranslation();
   const toadyMsg = [
     {
       id: 1,
@@ -41,7 +44,7 @@ const Notification = ({navigation}) => {
         style={styles.secoundContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Details')}>
           <Text style={{fontWeight: 'bold', fontSize: 18, color: 'black'}}>
-            Today
+            {t('common:today')}
           </Text>
         </TouchableOpacity>
         {toadyMsg.map((data, index) => {
@@ -54,7 +57,7 @@ const Notification = ({navigation}) => {
           );
         })}
         <Text style={{fontWeight: 'bold', fontSize: 18, color: 'black'}}>
-          Previous
+          {t('common:previous')}
         </Text>
         {PreviousMsg.map((data, index) => {
           return (

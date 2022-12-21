@@ -15,8 +15,12 @@ import {color} from '../../theme';
 import UploadImgContainer from '../../components/UploadImgContainer';
 import ButtonComp from '../../components/ButtonComp';
 
+// @translation
+import {useTranslation} from 'react-i18next';
+
 const NeedService = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const {t} = useTranslation();
   setTimeout(() => {
     setModalVisible(false);
   }, 4000);
@@ -25,23 +29,23 @@ const NeedService = () => {
       <ScrollView style={styles.secoundContainer}>
         <TxtInputContainer
           icon={require('../../assets/Icons/name.png')}
-          placeholder="My Name"
+          placeholder={t('common:myname')}
         />
         <TxtInputContainer
           icon={require('../../assets/Icons/calendar.png')}
-          placeholder="Services"
+          placeholder={t('common:service')}
         />
         <TxtInputContainer
           icon={require('../../assets/Icons/calender.png')}
-          placeholder="Date & Time"
+          placeholder={t('common:dateandtime')}
         />
         <TxtInputContainer
           icon={require('../../assets/Icons/Group4039.png')}
-          placeholder="House Address"
+          placeholder={t('common:houseaddress')}
         />
         <TxtInputContainer
           icon={require('../../assets/Icons/Group40.png')}
-          placeholder="Hours"
+          placeholder={t('common:hours')}
         />
         {/* //Comment BOX */}
         <View style={styles.InputContainer}>
@@ -51,14 +55,17 @@ const NeedService = () => {
               style={{height: 25, width: 25}}
               source={require('../../assets/Icons/comment.png')}
             />
-            <TextInput placeholderTextColor={'black'} placeholder="Comment" />
+            <TextInput
+              placeholderTextColor={'black'}
+              placeholder={t('common:comment')}
+            />
           </View>
         </View>
         {/* //Comment BOX END */}
 
         {/* //Photo */}
         <View style={{marginVertical: 20}}>
-          <Text style={styles.photos}>Photos</Text>
+          <Text style={styles.photos}>{t('common:photos')}</Text>
           <View
             style={{
               flex: 1,
@@ -86,7 +93,7 @@ const NeedService = () => {
                 style={{height: 30, width: 30}}
                 source={require('../../assets/Icons/upload.png')}
               />
-              <Text>Upload</Text>
+              <Text>{t('common:upload')}</Text>
             </View>
             <UploadImgContainer />
             <UploadImgContainer />
@@ -98,7 +105,10 @@ const NeedService = () => {
           <Text>Map Screen here</Text>
         </View>
         {/* @Button here */}
-        <ButtonComp onpress={() => setModalVisible(true)} name="Sent Request" />
+        <ButtonComp
+          onpress={() => setModalVisible(true)}
+          name={t('common:sendrequest')}
+        />
       </ScrollView>
 
       <Modal

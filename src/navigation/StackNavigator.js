@@ -12,6 +12,7 @@ import Notification from '../screen/Notification/Notification';
 import Details from '../screen/Details/Details';
 import Forget from '../screen/Forget/Forget';
 import Otp from '../screen/OTP/Otp';
+import NewPassword from '../screen/NewPassword/NewPassword';
 
 // @Navigation Screens
 import BottomTabNavigator from './BottomTabNavigator';
@@ -26,6 +27,7 @@ const StackNavigator = () => {
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
       <Stack.Screen name="Forget" component={Forget} />
       <Stack.Screen name="Otp" component={Otp} />
+      <Stack.Screen name="NewPassword" component={NewPassword} />
 
       {/* @Stack inside Screen */}
       <Stack.Screen

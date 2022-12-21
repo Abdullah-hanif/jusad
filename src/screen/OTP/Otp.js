@@ -16,6 +16,8 @@ import TxtInputContainer from '../../components/TxtInputContainer';
 import HeaderComp from '../../components/HeaderComp';
 import ButtonComp from '../../components/ButtonComp';
 
+import OTPTextInput from 'react-native-otp-textinput';
+
 // @languge convertor
 import {useTranslation} from 'react-i18next';
 const Otp = ({navigation}) => {
@@ -30,12 +32,18 @@ const Otp = ({navigation}) => {
           <Text style={styles.loginTxt}> {t('common:enterotp')}</Text>
 
           {/* //OTP VIew Here */}
-
+          <OTPTextInput
+            tintColor="lightgray"
+            inputCount={5}
+            textInputStyle={{borderWidth: 1, borderRadius: 10}}
+            // containerStyle={{borderWidth: 1}}
+            ref={e => (this.otpInput = e)}
+          />
           {/* //Button */}
           <View style={{marginTop: 50}}>
             <ButtonComp
-              name={t('common:Done')}
-              onpress={() => navigation.navigate('Otp')}
+              name={t('common:next')}
+              onpress={() => navigation.navigate('NewPassword')}
             />
           </View>
         </View>

@@ -73,4 +73,37 @@ export default {
   orderdeliverd: 'Pedido entregado',
   Done: 'Hecho',
   enterotp: 'Ingresar OTP',
+  next: 'Próxima',
+  createnewPassword: 'Crear nueva contraseña',
+  newpassword: 'Nueva contraseña',
+  confirmnewpassword: 'Confirmar nueva contraseña',
+  passwordCreated: 'Contraseña creada',
+  yournewPasscreatsucee: 'Su nueva contraseña se ha \n creado correctamente',
+
+  // @Need Services
+  needserices: 'Necesita servicio',
+  myname: 'Mi nombre',
+  service: 'Servicios',
+  dateandtime: 'Fecha y hora',
+  houseaddress: 'Dirección de la casa',
+  hours: 'Horas',
+  comment: 'Comentario',
+  photos: 'Fotos',
+
+  upload: 'Subir',
+  sendrequest: 'Enviar petición',
+  // @NotificaionScreen
+  today: 'Hoy',
+  previous: 'Previa',
+
+  // @DetailsScreen
+  seriveTime: 'Tiempo de servicio',
+  startTime: 'Hora de inicio',
+  notstartedyet: 'Todavía no se ha iniciado',
+  employeeDetails: 'Detalles de la empleada',
+  emplyee: 'Empleada',
+  age: 'Años',
+  employeeId: 'ID de empleado',
+  Gender: 'Género',
+  aboutEmployee: 'Acerca del empleado',
 };

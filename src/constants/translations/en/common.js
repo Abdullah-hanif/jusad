@@ -72,4 +72,37 @@ export default {
   orderdeliverd: 'Order Delivered',
   Done: 'Done',
   enterotp: 'Enter OTP',
+  next: 'Next',
+  createnewPassword: 'Create New Password',
+  newpassword: 'New Password',
+  confirmnewpassword: 'Confirm New Password',
+  passwordCreated: 'Password Created',
+  yournewPasscreatsucee: 'Your New Password has been \ncreated scucessfully',
+
+  // @Need Services
+  needserices: 'Need Service',
+  myname: 'My Name',
+  service: 'Services',
+  dateandtime: 'Daate & Time',
+  houseaddress: 'House Address',
+  hours: 'Hours',
+  comment: 'Comment',
+  photos: 'Potos',
+  upload: 'Upload',
+  sendrequest: 'Send Request',
+
+  // @NotificaionScreen
+  today: 'Today',
+  previous: 'Previous',
+
+  // @DetailsScreen
+  seriveTime: 'Service Time',
+  startTime: 'Start Time',
+  notstartedyet: 'Not Started Yet',
+  employeeDetails: 'Employee Details',
+  emplyee: 'Employee',
+  age: 'Age',
+  employeeId: 'Employee ID',
+  Gender: 'Gender',
+  aboutEmployee: 'About Employee',
 };
