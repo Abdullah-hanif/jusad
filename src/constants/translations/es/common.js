@@ -71,4 +71,6 @@ export default {
   paymentType: 'Tipo de pago',
   cashondelivery: 'contra reembolso',
   orderdeliverd: 'Pedido entregado',
+  Done: 'Hecho',
+  enterotp: 'Ingresar OTP',
 };

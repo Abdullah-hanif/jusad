@@ -18,7 +18,7 @@ import ButtonComp from '../../components/ButtonComp';
 
 // @languge convertor
 import {useTranslation} from 'react-i18next';
-const Login = ({navigation}) => {
+const Otp = ({navigation}) => {
   const {t} = useTranslation();
   return (
     <>
@@ -27,36 +27,15 @@ const Login = ({navigation}) => {
         <HeaderComp />
         {/* //Secound main Container Start */}
         <View style={styles.secoundContainer}>
-          <Text style={styles.loginTxt}>{t('common:login')}</Text>
+          <Text style={styles.loginTxt}> {t('common:enterotp')}</Text>
 
-          {/* //Input container start */}
-          <TxtInputContainer
-            icon={require('../../assets/Icons/Group4274.png')}
-            placeholder={t('common:Emailaddress')}
-          />
-          <TxtInputContainer
-            icon={require('../../assets/Icons/Login.png')}
-            placeholder={t('common:password')}
-          />
-
-          {/* //Input container End */}
-          <TouchableOpacity onPress={() => navigation.navigate('Forget')}>
-            <Text
-              style={{
-                textAlign: 'right',
-                color: 'black',
-                fontWeight: 'bold',
-                marginVertical: 5,
-              }}>
-              {t('common:ForgotPassword')}
-            </Text>
-          </TouchableOpacity>
+          {/* //OTP VIew Here */}
 
           {/* //Button */}
           <View style={{marginTop: 50}}>
             <ButtonComp
-              name={t('common:login')}
-              onpress={() => navigation.navigate('BottomTabNavigator')}
+              name={t('common:Done')}
+              onpress={() => navigation.navigate('Otp')}
             />
           </View>
         </View>
@@ -67,7 +46,7 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default Otp;
 
 const styles = StyleSheet.create({
   container: {

@@ -70,4 +70,6 @@ export default {
   paymentType: 'Payment Type',
   cashondelivery: 'Cash On Delivery',
   orderdeliverd: 'Order Delivered',
+  Done: 'Done',
+  enterotp: 'Enter OTP',
 };

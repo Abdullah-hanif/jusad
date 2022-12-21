@@ -8,6 +8,10 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from '../screen/SplashScreen/Splash';
 import Login from '../screen/Login/Login';
 import NeedService from '../screen/NeedService/NeedService';
+import Notification from '../screen/Notification/Notification';
+import Details from '../screen/Details/Details';
+import Forget from '../screen/Forget/Forget';
+import Otp from '../screen/OTP/Otp';
 
 // @Navigation Screens
 import BottomTabNavigator from './BottomTabNavigator';
@@ -20,6 +24,9 @@ const StackNavigator = () => {
       <Stack.Screen name="Splash" component={Splash} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
+      <Stack.Screen name="Forget" component={Forget} />
+      <Stack.Screen name="Otp" component={Otp} />
+
       {/* @Stack inside Screen */}
       <Stack.Screen
         options={{
@@ -38,6 +45,42 @@ const StackNavigator = () => {
         }}
         name="NeedService"
         component={NeedService}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: true,
+          headerTitle: 'Notification',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {fontWeight: 'bold', color: 'white'},
+          headerStyle: {backgroundColor: color.primmary, height: 70},
+          headerLeft: () => {
+            return (
+              <>
+                <Text style={{fontSize: 30, color: 'white'}}>{'<'}</Text>
+              </>
+            );
+          },
+        }}
+        name="Notification"
+        component={Notification}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: true,
+          headerTitle: 'Details',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {fontWeight: 'bold', color: 'white'},
+          headerStyle: {backgroundColor: color.primmary, height: 70},
+          headerLeft: () => {
+            return (
+              <>
+                <Text style={{fontSize: 30, color: 'white'}}>{'<'}</Text>
+              </>
+            );
+          },
+        }}
+        name="Details"
+        component={Details}
       />
     </Stack.Navigator>
   );

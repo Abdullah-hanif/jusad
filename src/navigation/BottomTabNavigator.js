@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 
 // @Navigtions
@@ -8,7 +8,8 @@ import {color} from '../theme';
 // @Screens
 import MytimeLine from '../screen/MyTimeline/MytimeLine';
 import Settings from '../screen/Settings/Settings';
-const BottomTabNavigator = () => {
+
+const BottomTabNavigator = ({navigation}) => {
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator>
@@ -35,11 +36,14 @@ const BottomTabNavigator = () => {
           headerRight: () => {
             return (
               <>
-                <Image
-                  resizeMode="contain"
-                  style={{height: 25, width: 25, right: 10}}
-                  source={require('../assets/Icons/Group10609.png')}
-                />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Notification')}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 25, width: 25, right: 10}}
+                    source={require('../assets/Icons/Group10609.png')}
+                  />
+                </TouchableOpacity>
               </>
             );
           },
