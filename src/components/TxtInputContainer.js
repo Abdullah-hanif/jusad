@@ -10,12 +10,12 @@ const TxtInputContainer = ({icon, placeholder}) => {
       <View style={styles.InputContainer}>
         <Image
           resizeMode="contain"
-          style={{height: 25, width: 25}}
+          style={{height: 25, width: 25, left: 5, tintColor: 'gray'}}
           source={icon}
         />
         <TextInput
-          placeholderTextColor={'black'}
-          style={{left: 5}}
+          placeholderTextColor={'gray'}
+          style={{left: 10, color: 'black'}}
           placeholder={placeholder}
         />
       </View>

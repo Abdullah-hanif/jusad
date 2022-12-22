@@ -34,14 +34,24 @@ const MytimeLine = ({navigation}) => {
         {/* <Text>MytimeLine</Text> */}
 
         <FirstCompt />
-        <ScrollView
+        {/* <ScrollView> */}
+        <View
           style={{
             flex: 1,
+            backgroundColor: 'white',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}>
-          <View>
-            <Text>No service today</Text>
-          </View>
-        </ScrollView>
+          <Image
+            resizeMode="contain"
+            style={{height: 80, width: 80}}
+            source={require('../../assets/Icons/calendar-1.png')}
+          />
+          <Text style={{color: 'lightgray', fontWeight: 'bold'}}>
+            No service today
+          </Text>
+        </View>
+        {/* </ScrollView> */}
       </View>
     </>
   );
@@ -59,7 +69,7 @@ const FirstCompt = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text
+          {/* <Text
             style={{
               fontWeight: 'bold',
               fontSize: 20,
@@ -67,22 +77,23 @@ const FirstCompt = () => {
               color: 'black',
             }}>
             {'<'}
-          </Text>
+          </Text> */}
+          <Image
+            resizeMode="contain"
+            style={{height: 20, width: 20}}
+            source={require('../../assets/Icons/back.png')}
+          />
           <Text style={{fontWeight: 'bold', color: 'black'}}>Today</Text>
           <Image
             resizeMode="contain"
             style={{height: 25, width: 25}}
             source={require('../../assets/Icons/calender.png')}
           />
-          <Text
-            style={{
-              fontWeight: 'bold',
-              fontSize: 20,
-              right: '10%',
-              color: 'black',
-            }}>
-            {'>'}
-          </Text>
+          <Image
+            resizeMode="contain"
+            style={{height: 20, width: 20}}
+            source={require('../../assets/Icons/back-2.png')}
+          />
         </View>
       </View>
     </>
@@ -94,7 +105,7 @@ export default MytimeLine;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'yellow',
   },
   firstContainer: {
     backgroundColor: 'white',

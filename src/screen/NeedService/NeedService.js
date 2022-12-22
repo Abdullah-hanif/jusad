@@ -52,11 +52,12 @@ const NeedService = () => {
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image
               resizeMode="contain"
-              style={{height: 25, width: 25}}
+              style={{height: 25, width: 25, left: 5}}
               source={require('../../assets/Icons/comment.png')}
             />
             <TextInput
-              placeholderTextColor={'black'}
+              style={{left: 10}}
+              placeholderTextColor={'gray'}
               placeholder={t('common:comment')}
             />
           </View>
@@ -78,14 +79,14 @@ const NeedService = () => {
             <View
               style={{
                 // marginVertical: 10,
-                // width: '30%',
+                width: '40%',
                 padding: 20,
                 margin: 10,
                 borderWidth: 1,
                 borderColor: 'black',
                 alignItems: 'center',
                 justifyContent: 'center',
-                paddingVertical: 30,
+                // paddingVertical: 30,
                 borderRadius: 10,
                 // backgroundColor: 'green',
               }}>
@@ -141,7 +142,7 @@ const NeedService = () => {
                 Sent Sucessfully
               </Text>
             </View>
-            <Text style={{textAlign: 'center'}}>
+            <Text style={{textAlign: 'center', color: 'gray'}}>
               your requst has been submitted Sucessfully{'\n'}We will notify you
               once admin approved your{'\n'}request,Thank you :)
             </Text>

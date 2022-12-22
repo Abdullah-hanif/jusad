@@ -8,8 +8,9 @@ const UploadImgContainer = () => {
         // marginVertical: 10,
         // padding: 20,
         // paddingHorizontal: 25,
+        width: '40%',
         margin: 10,
-        borderWidth: 1,
+        // borderWidth: 1,
         borderColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
@@ -18,7 +19,7 @@ const UploadImgContainer = () => {
         // backgroundColor: 'yellow',
       }}>
       <Image
-        style={{height: 110, width: 100, borderRadius: 10}}
+        style={{height: 105, width: 95, borderRadius: 10}}
         source={require('../assets/Icons/dummy.jpeg')}
       />
     </View>

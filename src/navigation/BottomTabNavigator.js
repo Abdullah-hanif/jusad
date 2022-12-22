@@ -20,14 +20,30 @@ const BottomTabNavigator = ({navigation}) => {
           headerTitleStyle: {fontWeight: 'bold', color: 'white'},
           headerStyle: {backgroundColor: color.primmary, height: 70},
           tabBarLabel: 'My Timeline',
-          tabBarLabelStyle: {textAlign: 'center'},
-          tabBarStyle: {justifyContent: 'center', alignItems: 'center'},
-          tabBarIcon: () => {
+          tabBarLabelStyle: {
+            textAlign: 'center',
+            fontSize: 12,
+            bottom: 6,
+            color: 'gray',
+          },
+          tabBarStyle: {
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: 70,
+            padding: 10,
+            paddingVertical: 5,
+          },
+
+          tabBarIcon: ({focused}) => {
             return (
               <>
                 <Image
                   resizeMode="contain"
-                  style={{height: 25, width: 25}}
+                  style={{
+                    height: 25,
+                    width: 25,
+                    tintColor: focused ? color.primmary : 'gray',
+                  }}
                   source={require('../assets/Icons/Group4646.png')}
                 />
               </>
@@ -40,7 +56,7 @@ const BottomTabNavigator = ({navigation}) => {
                   onPress={() => navigation.navigate('Notification')}>
                   <Image
                     resizeMode="contain"
-                    style={{height: 25, width: 25, right: 10}}
+                    style={{height: 25, width: 25, right: 20}}
                     source={require('../assets/Icons/Group10609.png')}
                   />
                 </TouchableOpacity>
@@ -53,6 +69,14 @@ const BottomTabNavigator = ({navigation}) => {
       />
       <Tab.Screen
         options={{
+          tabBarLabelStyle: {textAlign: 'center', fontSize: 12, bottom: 6},
+          tabBarStyle: {
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: 70,
+            padding: 10,
+            paddingVertical: 5,
+          },
           tabBarIcon: () => {
             return (
               <>

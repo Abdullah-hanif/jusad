@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 // @Navigation
@@ -16,9 +16,11 @@ import NewPassword from '../screen/NewPassword/NewPassword';
 
 // @Navigation Screens
 import BottomTabNavigator from './BottomTabNavigator';
+import {useNavigation} from '@react-navigation/native';
 import {color} from '../theme';
 
 const StackNavigator = () => {
+  const nav = useNavigation();
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -40,7 +42,13 @@ const StackNavigator = () => {
           headerLeft: () => {
             return (
               <>
-                <Text style={{fontSize: 30, color: 'white'}}>{'<'}</Text>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
               </>
             );
           },
@@ -58,7 +66,13 @@ const StackNavigator = () => {
           headerLeft: () => {
             return (
               <>
-                <Text style={{fontSize: 30, color: 'white'}}>{'<'}</Text>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
               </>
             );
           },
@@ -76,7 +90,13 @@ const StackNavigator = () => {
           headerLeft: () => {
             return (
               <>
-                <Text style={{fontSize: 30, color: 'white'}}>{'<'}</Text>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
               </>
             );
           },
