@@ -19,6 +19,7 @@ import ButtonComp from '../../components/ButtonComp';
 // @languge convertor
 import {useTranslation} from 'react-i18next';
 const Login = ({navigation}) => {
+  const [type, setType] = React.useState('coordinator');
   const {t} = useTranslation();
   return (
     <>
@@ -56,7 +57,11 @@ const Login = ({navigation}) => {
           <View style={{marginTop: 50}}>
             <ButtonComp
               name={t('common:login')}
-              onpress={() => navigation.navigate('BottomTabNavigator')}
+              onpress={() =>
+                type == 'coordinator'
+                  ? navigation.navigate('CoordintorStack')
+                  : navigation.navigate('BottomTabNavigator')
+              }
             />
           </View>
         </View>

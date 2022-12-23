@@ -10,10 +10,10 @@ import {
   Dimensions,
 } from 'react-native';
 import React, {useState, useEffect, useRef} from 'react';
-import TxtInputContainer from '../../components/TxtInputContainer';
-import {color} from '../../theme';
-import UploadImgContainer from '../../components/UploadImgContainer';
-import ButtonComp from '../../components/ButtonComp';
+import TxtInputContainer from '../../../components/TxtInputContainer';
+import {color} from '../../../theme';
+import UploadImgContainer from '../../../components/UploadImgContainer';
+import ButtonComp from '../../../components/ButtonComp';
 
 // @translation
 import {useTranslation} from 'react-i18next';
@@ -21,7 +21,7 @@ import {useTranslation} from 'react-i18next';
 // @Map
 import MapView, {Marker} from 'react-native-maps';
 
-const NeedService = () => {
+const AssignTask = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const {t} = useTranslation();
   const mapRef = useRef();
@@ -32,24 +32,28 @@ const NeedService = () => {
     <View style={styles.container}>
       <ScrollView style={styles.secoundContainer}>
         <TxtInputContainer
-          icon={require('../../assets/Icons/name.png')}
-          placeholder={t('common:myname')}
+          icon={require('../../../assets/Icons/name.png')}
+          placeholder="Client Name"
         />
         <TxtInputContainer
-          icon={require('../../assets/Icons/calendar.png')}
+          icon={require('../../../assets/Icons/calendar.png')}
           placeholder={t('common:service')}
         />
         <TxtInputContainer
-          icon={require('../../assets/Icons/calender.png')}
-          placeholder={t('common:dateandtime')}
+          icon={require('../../../assets/Icons/Group13108.png')}
+          placeholder="Foundation"
         />
         <TxtInputContainer
-          icon={require('../../assets/Icons/Group4039.png')}
-          placeholder={t('common:houseaddress')}
+          icon={require('../../../assets/Icons/Group11914.png')}
+          placeholder="Employee"
         />
         <TxtInputContainer
-          icon={require('../../assets/Icons/Group40.png')}
-          placeholder={t('common:hours')}
+          icon={require('../../../assets/Icons/Group40.png')}
+          placeholder="Date & Time"
+        />
+        <TxtInputContainer
+          icon={require('../../../assets/Icons/Group4039.png')}
+          placeholder="Home Address"
         />
         {/* //Comment BOX */}
         <View style={styles.InputContainer}>
@@ -57,7 +61,7 @@ const NeedService = () => {
             <Image
               resizeMode="contain"
               style={{height: 25, width: 25, left: 5}}
-              source={require('../../assets/Icons/comment.png')}
+              source={require('../../../assets/Icons/comment.png')}
             />
             <TextInput
               style={{left: 10}}
@@ -96,7 +100,7 @@ const NeedService = () => {
               }}>
               <Image
                 style={{height: 30, width: 30}}
-                source={require('../../assets/Icons/upload.png')}
+                source={require('../../../assets/Icons/upload.png')}
               />
               <Text>{t('common:upload')}</Text>
             </View>
@@ -118,16 +122,14 @@ const NeedService = () => {
               <Image
                 resizeMode="contain"
                 style={{height: 30, width: 30}}
-                source={require('../../assets/Icons/Group4036.png')}
+                source={require('../../../assets/Icons/Group4036.png')}
               />
-              <Text style={styles1.txtStyle}>
-                C.Luis Placelss.16,28340,Barcelona
-              </Text>
+              <Text style={styles1.txtStyle}>Pin Location</Text>
             </TouchableOpacity>
             {/* <ButtonComp
-              onpress={() => setModalVisible(true)}
-              name={t('common:sendrequest')}
-            /> */}
+                onpress={() => setModalVisible(true)}
+                name={t('common:sendrequest')}
+              /> */}
           </View>
           <MapView
             ref={mapRef}
@@ -148,7 +150,7 @@ const NeedService = () => {
               }}>
               <Image
                 resizeMode="contain"
-                source={require('../../assets/Icons/Group4243.png')}
+                source={require('../../../assets/Icons/Group4243.png')}
                 style={{
                   width: 40,
                   height: 40,
@@ -161,7 +163,7 @@ const NeedService = () => {
         <View style={{marginVertical: 30}}>
           <ButtonComp
             onpress={() => setModalVisible(true)}
-            name={t('common:sendrequest')}
+            name="Assign Task"
           />
         </View>
       </ScrollView>
@@ -184,7 +186,7 @@ const NeedService = () => {
               <Image
                 resizeMode="contain"
                 style={{height: 80, width: 80}}
-                source={require('../../assets/Icons/Group16996.png')}
+                source={require('../../../assets/Icons/Group16996.png')}
               />
               <Text
                 style={{
@@ -207,7 +209,7 @@ const NeedService = () => {
   );
 };
 
-export default NeedService;
+export default AssignTask;
 
 const styles = StyleSheet.create({
   container: {
