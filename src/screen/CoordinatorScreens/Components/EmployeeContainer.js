@@ -31,11 +31,12 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
     padding: 1,
-    borderRadius: 5,
-    borderWidth: 1,
-    shadowColor: '#000',
-    borderColor: 'lightgray',
     marginVertical: 10,
+    borderRadius: 10,
+    borderWidth: 0.5,
+    borderColor: 'lightgray',
+
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,

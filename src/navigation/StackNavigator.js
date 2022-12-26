@@ -16,6 +16,8 @@ import NewPassword from '../screen/NewPassword/NewPassword';
 
 // @Coordinator Screens
 import AssignTask from '../screen/CoordinatorScreens/Screens/AssignTask';
+import ServiceDetails from '../screen/CoordinatorScreens/Screens/ServiceDetails/ServiceDetails';
+import CoEmployeeDetails from '../screen/CoordinatorScreens/Screens/EmployeeDetails/CoEmployeeDetails';
 
 // @Navigation Screens
 import BottomTabNavigator from './BottomTabNavigator';
@@ -117,19 +119,23 @@ const StackNavigator = () => {
 
 //@COORDINATOR StackNAVIGATIOR
 
+const options = {
+  headerShown: true,
+
+  headerTitleAlign: 'center',
+  headerTitleStyle: {fontWeight: 'bold', color: 'white'},
+  headerStyle: {backgroundColor: color.primmary, height: 70},
+};
+
 const CoordintorStack = () => {
   const nav = useNavigation();
-
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="CoordinatorBottom" component={CoordinatorBottom} />
       <Stack.Screen
         options={{
-          headerShown: true,
+          ...options,
           headerTitle: 'Assign New Task',
-          headerTitleAlign: 'center',
-          headerTitleStyle: {fontWeight: 'bold', color: 'white'},
-          headerStyle: {backgroundColor: color.primmary, height: 70},
           headerLeft: () => {
             return (
               <>
@@ -147,29 +153,49 @@ const CoordintorStack = () => {
         name="AssignTask"
         component={AssignTask}
       />
-      <Stack.Screen name="ServiceDetails" component={ServiceDetails} />
-      <Stack.Screen name="EmplyeeDetails" component={EmplyeeDetails} />
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Service Details',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="ServiceDetails"
+        component={ServiceDetails}
+      />
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Employee Details',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="CoEmployeeDetails"
+        component={CoEmployeeDetails}
+      />
     </Stack.Navigator>
-  );
-};
-
-const ServiceDetails = () => {
-  return (
-    <>
-      <View>
-        <Text>Service Details</Text>
-      </View>
-    </>
-  );
-};
-
-const EmplyeeDetails = () => {
-  return (
-    <>
-      <View>
-        <Text>EmplyeeDetails</Text>
-      </View>
-    </>
   );
 };
 

@@ -1,8 +1,14 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 // @component
 import EmployeeContainer from '../Components/EmployeeContainer';
-const Employees = () => {
+const Employees = ({navigation}) => {
   const employeeData = [
     {
       id: 1,
@@ -28,7 +34,13 @@ const Employees = () => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.secoundContainer}>
-        <Text style={styles.heading}>Employees</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('ServiceDetails')}>
+          <Text style={styles.heading}>Employees</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('CoEmployeeDetails')}>
+          <Text style={styles.heading}>Employees Details</Text>
+        </TouchableOpacity>
         {employeeData.map((data, index) => {
           return <EmployeeContainer img={data.imageuir} name={data.name} />;
         })}
@@ -49,6 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginHorizontal: 20,
     marginTop: 20,
+
     // paddingVertical: 20,
   },
   heading: {

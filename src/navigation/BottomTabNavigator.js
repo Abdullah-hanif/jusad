@@ -58,9 +58,7 @@ const BottomTabNavigator = ({navigation}) => {
             return (
               <>
                 <TouchableOpacity
-                  onPress={() =>
-                    navigation.navigate('UserStack', {screen: 'Notification'})
-                  }>
+                  onPress={() => navigation.navigate('Notification')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 25, width: 25, right: 20}}
