@@ -1,9 +1,9 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const EmployeeContainer = ({img, name}) => {
+const EmployeeContainer = ({img, name, onpress}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={onpress} style={styles.container}>
       {/* <Text>EmployeeContainer</Text> */}
       <View style={styles.imgName}>
         <View style={styles.insideImgName}>
@@ -20,7 +20,7 @@ const EmployeeContainer = ({img, name}) => {
           source={require('../../../assets/Icons/Group16967.png')}
         />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

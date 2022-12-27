@@ -34,15 +34,14 @@ const Employees = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.secoundContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('ServiceDetails')}>
-          <Text style={styles.heading}>Employees</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('CoEmployeeDetails')}>
-          <Text style={styles.heading}>Employees Details</Text>
-        </TouchableOpacity>
         {employeeData.map((data, index) => {
-          return <EmployeeContainer img={data.imageuir} name={data.name} />;
+          return (
+            <EmployeeContainer
+              onpress={() => navigation.navigate('StatusScreen')}
+              img={data.imageuir}
+              name={data.name}
+            />
+          );
         })}
       </ScrollView>
     </View>

@@ -7,6 +7,10 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
+import ContainerList from '../Components/ContainerList';
+
+// @Compoents
+import FirstCompt from '../Components/FirstCompt';
 
 const Task = ({navigation}) => {
   return (
@@ -38,14 +42,24 @@ const Task = ({navigation}) => {
 
         <FirstCompt />
         {/* <ScrollView> */}
-        <View
+        <ScrollView
+          showsVerticalScrollIndicator={false}
           style={{
             flex: 1,
             backgroundColor: 'white',
-            justifyContent: 'center',
-            alignItems: 'center',
+            // justifyContent: 'center',
+
+            margin: 10,
+            // alignItems: 'center',
           }}>
-          <Image
+          <ContainerList
+            onpress={() => navigation.navigate('ServiceDetails')}
+            first={true}
+          />
+          <ContainerList first={false} />
+          <ContainerList first={false} />
+
+          {/* <Image
             resizeMode="contain"
             style={{height: 80, width: 80}}
             source={require('../../../assets/Icons/calendar-1.png')}
@@ -53,51 +67,9 @@ const Task = ({navigation}) => {
           <Text style={{color: 'lightgray', fontWeight: 'bold'}}>
             No service today
           </Text>
-        </View>
-        {/* </ScrollView> */}
-      </View>
-    </>
-  );
-};
-
-const FirstCompt = () => {
-  return (
-    <>
-      <View style={styles.firstContainer}>
-        <View
-          style={{
-            flexDirection: 'row',
-            // backgroundColor: 'yellow',
-            width: '35%',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          {/* <Text
-              style={{
-                fontWeight: 'bold',
-                fontSize: 20,
-                right: '10%',
-                color: 'black',
-              }}>
-              {'<'}
-            </Text> */}
-          <Image
-            resizeMode="contain"
-            style={{height: 20, width: 20}}
-            source={require('../../../assets/Icons/back.png')}
-          />
-          <Text style={{fontWeight: 'bold', color: 'black'}}>Today</Text>
-          <Image
-            resizeMode="contain"
-            style={{height: 25, width: 25}}
-            source={require('../../../assets/Icons/calender.png')}
-          />
-          <Image
-            resizeMode="contain"
-            style={{height: 20, width: 20}}
-            source={require('../../../assets/Icons/back-2.png')}
-          />
-        </View>
+        </View> */}
+          {/* </ScrollView> */}
+        </ScrollView>
       </View>
     </>
   );
@@ -108,12 +80,6 @@ export default Task;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
-  },
-  firstContainer: {
     backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 10,
   },
 });

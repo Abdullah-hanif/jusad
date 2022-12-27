@@ -18,6 +18,7 @@ import NewPassword from '../screen/NewPassword/NewPassword';
 import AssignTask from '../screen/CoordinatorScreens/Screens/AssignTask';
 import ServiceDetails from '../screen/CoordinatorScreens/Screens/ServiceDetails/ServiceDetails';
 import CoEmployeeDetails from '../screen/CoordinatorScreens/Screens/EmployeeDetails/CoEmployeeDetails';
+import StatusScreen from '../screen/CoordinatorScreens/Screens/Status/StatusScreen';
 
 // @Navigation Screens
 import BottomTabNavigator from './BottomTabNavigator';
@@ -194,6 +195,27 @@ const CoordintorStack = () => {
         }}
         name="CoEmployeeDetails"
         component={CoEmployeeDetails}
+      />
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Coordinator',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="StatusScreen"
+        component={StatusScreen}
       />
     </Stack.Navigator>
   );
