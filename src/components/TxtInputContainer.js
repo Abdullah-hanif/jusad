@@ -4,7 +4,7 @@ import React from 'react';
 // @Constants
 import {color} from '../theme';
 
-const TxtInputContainer = ({icon, placeholder}) => {
+const TxtInputContainer = ({icon, placeholder, setTxt}) => {
   return (
     <>
       <View style={styles.InputContainer}>
@@ -16,6 +16,7 @@ const TxtInputContainer = ({icon, placeholder}) => {
         <TextInput
           placeholderTextColor={'gray'}
           style={{left: 10, color: 'black'}}
+          onChangeText={txt => setTxt(txt)}
           placeholder={placeholder}
         />
       </View>

@@ -20,9 +20,15 @@ import ServiceDetails from '../screen/CoordinatorScreens/Screens/ServiceDetails/
 import CoEmployeeDetails from '../screen/CoordinatorScreens/Screens/EmployeeDetails/CoEmployeeDetails';
 import StatusScreen from '../screen/CoordinatorScreens/Screens/Status/StatusScreen';
 
+// @EMPLOYEE SCREEN
+import EmpServiceDetails from '../screen/Employee/Screens/EmployeeServiceDetail/EmpServiceDetails';
+import EmpServiceDetails1 from '../screen/Employee/Screens/EmployeeServiceDetail/EmpServiceDetails1';
+import AddExpenses from '../screen/Employee/Screens/AddExpenses/AddExpenses';
+import ExpenseDetails from '../screen/Employee/Screens/AddExpenses/ExpenseDetails';
+
 // @Navigation Screens
 import BottomTabNavigator from './BottomTabNavigator';
-import {CoordinatorBottom} from './BottomTabNavigator';
+import {CoordinatorBottom, EmployeeBottom} from './BottomTabNavigator';
 import {useNavigation} from '@react-navigation/native';
 import {color} from '../theme';
 
@@ -36,6 +42,7 @@ const StackNavigator = () => {
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
 
       <Stack.Screen name="CoordintorStack" component={CoordintorStack} />
+      <Stack.Screen name="EmployeeStack" component={EmployeeStack} />
 
       <Stack.Screen name="Forget" component={Forget} />
       <Stack.Screen name="Otp" component={Otp} />
@@ -222,6 +229,104 @@ const CoordintorStack = () => {
 };
 
 // =======================================END CoordintorStack=============================>
+
+// =======================================END Emplyee=============================>
+
+const EmployeeStack = () => {
+  const nav = useNavigation();
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="EmployeeBottom" component={EmployeeBottom} />
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Employee',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="EmpServiceDetails"
+        component={EmpServiceDetails}
+      />
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Service Details',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="EmpServiceDetails1"
+        component={EmpServiceDetails1}
+      />
+
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Service Details',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="AddExpenses"
+        component={AddExpenses}
+      />
+      <Stack.Screen
+        options={{
+          ...options,
+          headerTitle: 'Service Details',
+          headerLeft: () => {
+            return (
+              <>
+                <TouchableOpacity onPress={() => nav.goBack()}>
+                  <Image
+                    resizeMode="contain"
+                    style={{height: 30, width: 30}}
+                    source={require('../assets/Icons/back-1.png')}
+                  />
+                </TouchableOpacity>
+              </>
+            );
+          },
+        }}
+        name="ExpenseDetails"
+        component={ExpenseDetails}
+      />
+    </Stack.Navigator>
+  );
+};
+
+// =======================================END Emplyee=============================>
 
 export default StackNavigator;
 

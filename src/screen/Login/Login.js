@@ -19,7 +19,17 @@ import ButtonComp from '../../components/ButtonComp';
 // @languge convertor
 import {useTranslation} from 'react-i18next';
 const Login = ({navigation}) => {
-  const [type, setType] = React.useState('coordinator');
+  const [type, setType] = React.useState('');
+
+  const loginUser = () => {
+    if (type == 'Coordinator@gmail.com') {
+      navigation.navigate('CoordintorStack');
+    } else if (type == 'Employee@gmail.com') {
+      navigation.navigate('EmployeeStack');
+    } else {
+      navigation.navigate('BottomTabNavigator');
+    }
+  };
   const {t} = useTranslation();
   return (
     <>
@@ -32,6 +42,7 @@ const Login = ({navigation}) => {
 
           {/* //Input container start */}
           <TxtInputContainer
+            setTxt={txt => setType(txt)}
             icon={require('../../assets/Icons/Group4274.png')}
             placeholder={t('common:Emailaddress')}
           />
@@ -55,14 +66,7 @@ const Login = ({navigation}) => {
 
           {/* //Button */}
           <View style={{marginTop: 50}}>
-            <ButtonComp
-              name={t('common:login')}
-              onpress={() =>
-                type == 'coordinator'
-                  ? navigation.navigate('CoordintorStack')
-                  : navigation.navigate('BottomTabNavigator')
-              }
-            />
+            <ButtonComp name={t('common:login')} onpress={() => loginUser()} />
           </View>
         </View>
 
