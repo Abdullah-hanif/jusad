@@ -12,6 +12,7 @@ import Settings from '../screen/Settings/Settings';
 // @COORDINAtors SCREENS
 import Task from '../screen/CoordinatorScreens/Screens/Task';
 import Employees from '../screen/CoordinatorScreens/Screens/Employees';
+import CoSettings from '../screen/CoordinatorScreens/Screens/Settings/CoSettings';
 
 // @Employee
 import EmployeeTask from '../screen/Employee/Screens/EmployeeTask/EmployeeTask';
@@ -214,8 +215,8 @@ export const CoordinatorBottom = () => {
             );
           },
         }}
-        name="Settings"
-        component={Settings}
+        name="CoSettings"
+        component={CoSettings}
       />
     </Tab.Navigator>
   );
