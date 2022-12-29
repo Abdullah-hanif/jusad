@@ -20,7 +20,7 @@ const StatusScreen = ({navigation}) => {
           backgroundColor: 'white',
           // justifyContent: 'center',
 
-          margin: 10,
+          margin: 15,
           // alignItems: 'center',
         }}>
         <StatusContainerList

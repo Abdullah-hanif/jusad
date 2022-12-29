@@ -44,7 +44,7 @@ const MytimeLine = ({navigation}) => {
           }}>
           <Image
             resizeMode="contain"
-            style={{height: 80, width: 80}}
+            style={{height: 100, width: 100}}
             source={require('../../assets/Icons/calendar-1.png')}
           />
           <Text style={{color: 'lightgray', fontWeight: 'bold'}}>

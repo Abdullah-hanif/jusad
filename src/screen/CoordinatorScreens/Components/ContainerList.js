@@ -6,44 +6,16 @@ const ContainerList = ({first, onpress}) => {
   return (
     <TouchableOpacity onPress={onpress} style={styles.container}>
       <View style={{alignItems: 'center'}}>
-        <View
-          style={{
-            height: 20,
-            width: 20,
-            // backgroundColor: 'green',
-            borderWidth: 1,
-            borderColor: color.primmary,
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: 10,
-            borderRadius: 20,
-          }}>
+        <View style={styles.ballBorder}>
           <View
-            style={{
-              height: 15,
-              width: 15,
-              backgroundColor: first ? color.primmary : 'white',
-              borderRadius: 20,
-            }}></View>
+            style={[
+              styles.ballStyle,
+              {backgroundColor: first ? color.primmary : 'white'},
+            ]}></View>
         </View>
-        <View
-          style={{
-            height: 120,
-            width: 1,
-            backgroundColor: color.primmary,
-            borderRadius: 20,
-          }}></View>
+        <View style={styles.lineStyle}></View>
       </View>
-      <View
-        style={{
-          margin: 20,
-          borderWidth: 1,
-          borderColor: 'gray',
-          right: 15,
-          width: '90%',
-          padding: 10,
-          borderRadius: 20,
-        }}>
+      <View style={styles.boxContainer}>
         <View
           style={{
             flexDirection: 'row',
@@ -55,7 +27,7 @@ const ContainerList = ({first, onpress}) => {
               width: '75%',
               marginTop: 10,
               flexDirection: 'row',
-              justifyContent: 'space-around',
+              // justifyContent: 'space-around',
               alignItems: 'center',
             }}>
             <View>
@@ -67,10 +39,10 @@ const ContainerList = ({first, onpress}) => {
               <Text style={{color: 'black', fontWeight: 'bold'}}>
                 John Michel
               </Text>
-              <Text style={{color: 'black', fontWeight: 'bold'}}>
+              <Text style={{color: 'black', fontWeight: 'bold', right: 20}}>
                 Sara Martin
               </Text>
-              <Text style={{color: 'black', fontWeight: 'bold'}}>
+              <Text style={{color: 'black', fontWeight: 'bold', right: 10}}>
                 Cleaning House
               </Text>
             </View>
@@ -80,7 +52,7 @@ const ContainerList = ({first, onpress}) => {
               style={{height: 30, width: 30}}
               source={require('../../../assets/Icons/Group16967.png')}
             />
-            <Text style={{fontSize: 10}}>View Details</Text>
+            <Text style={styles.viewDetails}>View Details</Text>
           </View>
         </View>
       </View>
@@ -96,4 +68,47 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flexDirection: 'row',
   },
+  ballBorder: {
+    height: 20,
+    width: 20,
+    // backgroundColor: 'green',
+    borderWidth: 1,
+    borderColor: color.primmary,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+    borderRadius: 20,
+  },
+  ballStyle: {
+    height: 15,
+    width: 15,
+
+    borderRadius: 20,
+  },
+  lineStyle: {
+    height: 100,
+    width: 1,
+    backgroundColor: color.primmary,
+    borderRadius: 20,
+  },
+  boxContainer: {
+    margin: 20,
+    borderWidth: 1,
+    borderColor: 'lightgray',
+    marginVertical: '2%',
+    right: 15,
+    width: '90%',
+    padding: 10,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.0,
+
+    elevation: 1,
+  },
+  viewDetails: {fontSize: 10, color: 'black'},
 });

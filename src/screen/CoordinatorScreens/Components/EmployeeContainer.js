@@ -12,7 +12,7 @@ const EmployeeContainer = ({img, name, onpress}) => {
             style={{height: 50, width: 50, borderRadius: 30}}
             source={img}
           />
-          <Text style={{fontSize: 17, color: 'black'}}>{name}</Text>
+          <Text style={{fontSize: 17, color: 'black', right: 15}}>{name}</Text>
         </View>
         <Image
           resizeMode="contain"

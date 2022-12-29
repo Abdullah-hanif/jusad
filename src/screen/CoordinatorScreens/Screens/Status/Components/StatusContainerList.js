@@ -28,7 +28,7 @@ const StatusContainerList = ({first, onpress}) => {
         </View>
         <View
           style={{
-            height: 100,
+            height: 80,
             width: 1,
             backgroundColor: color.primmary,
             borderRadius: 20,
@@ -38,11 +38,22 @@ const StatusContainerList = ({first, onpress}) => {
         style={{
           margin: 20,
           borderWidth: 1,
-          borderColor: 'gray',
+          borderColor: 'lightgray',
           right: 15,
           width: '90%',
+          marginTop: 20,
+          marginVertical: '1%',
           padding: 10,
-          borderRadius: 20,
+          borderRadius: 10,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 1,
+          },
+          shadowOpacity: 0.18,
+          shadowRadius: 1.0,
+
+          elevation: 1,
         }}>
         <View
           style={{
@@ -63,10 +74,10 @@ const StatusContainerList = ({first, onpress}) => {
               <Text style={{color: 'gray'}}>Service:</Text>
             </View>
             <View style={{left: 10}}>
-              <Text style={{color: 'black', fontWeight: 'bold'}}>
+              <Text style={{color: 'black', fontWeight: 'bold', right: 12}}>
                 Sara Martin
               </Text>
-              <Text style={{color: 'black', fontWeight: 'bold'}}>
+              <Text style={{color: 'black', fontWeight: 'bold', right: 5}}>
                 Cleaning House
               </Text>
             </View>

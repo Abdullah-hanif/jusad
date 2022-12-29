@@ -71,7 +71,7 @@ const ServiceDetails = () => {
         {/* //Comment==============================================>END */}
         {/* //PHOTOS ==============================================> */}
         <View style={{marginVertical: 10}}>
-          <Text style={styles.detailStyle}>Photos</Text>
+          <Text style={[styles.detailStyle, {fontWeight: 'bold'}]}>Photos</Text>
           <View
             style={{
               flexDirection: 'row',
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   secoundContainer: {
-    margin: 10,
+    margin: 15,
     marginVertical: 20,
   },
   detailTitle: {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
   detailStyle: {
     fontSize: 17,
-    fontWeight: 'bold',
+    fontWeight: '300',
     color: 'black',
   },
   map: {

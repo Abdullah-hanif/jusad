@@ -33,7 +33,7 @@ const CoEmployeeDetails = () => {
               style={{height: 70, width: 70}}
               source={require('../../../../assets/Icons/Group40.png')}
             />
-            <Text>Start Time</Text>
+            <Text style={{color: 'black'}}>Start Time</Text>
             <Text style={{color: 'black'}}>10:34 AM</Text>
           </View>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -41,7 +41,7 @@ const CoEmployeeDetails = () => {
               style={{height: 70, width: 70}}
               source={require('../../../../assets/Icons/Group40.png')}
             />
-            <Text>End Time</Text>
+            <Text style={{color: 'black'}}>End Time</Text>
             <Text style={{color: 'black'}}>On Service</Text>
           </View>
         </View>
@@ -146,13 +146,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   secoundContainer: {
-    margin: 10,
-    marginVertical: 20,
+    margin: 15,
+    marginVertical: 40,
     backgroundColor: 'white',
   },
   titleStyle: {
     fontSize: 17,
-    fontWeight: 'bold',
+    fontWeight: '700',
     color: 'black',
   },
   map: {
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    width: Dimensions.get('screen').width - 20,
+    width: Dimensions.get('screen').width - 30,
     height: Dimensions.get('screen').height / 2,
 
     // shadowColor: '#000',

@@ -34,15 +34,18 @@ const Employees = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.secoundContainer}>
-        {employeeData.map((data, index) => {
-          return (
-            <EmployeeContainer
-              onpress={() => navigation.navigate('StatusScreen')}
-              img={data.imageuir}
-              name={data.name}
-            />
-          );
-        })}
+        <Text style={styles.heading}>Employees</Text>
+        <View style={{marginTop: 20}}>
+          {employeeData.map((data, index) => {
+            return (
+              <EmployeeContainer
+                onpress={() => navigation.navigate('StatusScreen')}
+                img={data.imageuir}
+                name={data.name}
+              />
+            );
+          })}
+        </View>
       </ScrollView>
     </View>
   );
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 17,
     color: 'black',
   },
 });
