@@ -23,9 +23,7 @@ const ContainerList = ({first, onpress}) => {
           }}>
           <View
             style={{
-              backgroundColor: 'white',
               width: '75%',
-              marginTop: 10,
               flexDirection: 'row',
               // justifyContent: 'space-around',
               alignItems: 'center',
@@ -35,7 +33,7 @@ const ContainerList = ({first, onpress}) => {
               <Text style={{color: 'gray'}}>Client:</Text>
               <Text style={{color: 'gray'}}>Service:</Text>
             </View>
-            <View>
+            <View style={{paddingVertical:5}}>
               <Text style={{color: 'black', fontWeight: 'bold'}}>
                 John Michel
               </Text>
@@ -86,7 +84,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   lineStyle: {
-    height: 100,
+    height:'100%',
     width: 1,
     backgroundColor: color.primmary,
     borderRadius: 20,
@@ -95,20 +93,16 @@ const styles = StyleSheet.create({
     margin: 20,
     borderWidth: 1,
     borderColor: 'lightgray',
-    marginVertical: '2%',
+    // marginVertical: '2%',
     right: 15,
     width: '90%',
     padding: 10,
     borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.18,
-    shadowRadius: 1.0,
-
-    elevation: 1,
+  //  shadowColor: '#000',
+  justifyContent:'center',
+  alignItems:'center',
+  height:'80%'
+  
   },
   viewDetails: {fontSize: 10, color: 'black'},
 });

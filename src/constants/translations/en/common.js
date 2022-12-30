@@ -87,7 +87,7 @@ export default {
   houseaddress: 'House Address',
   hours: 'Hours',
   comment: 'Comment',
-  photos: 'Potos',
+  photos: 'Photos',
   upload: 'Upload',
   sendrequest: 'Send Request',
 

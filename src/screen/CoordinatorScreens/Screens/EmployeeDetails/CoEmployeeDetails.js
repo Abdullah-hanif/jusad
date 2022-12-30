@@ -19,7 +19,7 @@ const CoEmployeeDetails = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       <View style={styles.secoundContainer}>
-        <Text style={styles.titleStyle}>SeriviceTime</Text>
+        <Text style={styles.titleStyle}>Service Time</Text>
 
         <View
           style={{
@@ -56,7 +56,7 @@ const CoEmployeeDetails = () => {
               width: '90%',
               margin: 10,
             }}>
-            <TouchableOpacity onPress={() => working} style={styles1.container}>
+            <TouchableOpacity style={styles1.container}>
               <Image
                 resizeMode="contain"
                 style={{height: 30, width: 30}}
@@ -146,8 +146,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   secoundContainer: {
-    margin: 15,
-    marginVertical: 40,
+    margin: 10,
+    padding:15,
+    marginVertical: 25,
     backgroundColor: 'white',
   },
   titleStyle: {

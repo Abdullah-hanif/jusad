@@ -9,21 +9,21 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import TxtInputContainer from '../../components/TxtInputContainer';
-import {color} from '../../theme';
+import { color } from '../../theme';
 import UploadImgContainer from '../../components/UploadImgContainer';
 import ButtonComp from '../../components/ButtonComp';
 
 // @translation
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 // @Map
-import MapView, {Marker} from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 const NeedService = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const mapRef = useRef();
   setTimeout(() => {
     setModalVisible(false);
@@ -53,23 +53,24 @@ const NeedService = () => {
         />
         {/* //Comment BOX */}
         <View style={styles.InputContainer}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image
               resizeMode="contain"
-              style={{height: 25, width: 25, left: 5}}
+              style={{ height: 25, width: 25, left: 5 }}
               source={require('../../assets/Icons/comment.png')}
             />
             <TextInput
-              style={{left: 10}}
+              style={{ left: 10, width: '100%', height: 70, textAlign: "justify" }}
               placeholderTextColor={'gray'}
               placeholder={t('common:comment')}
+              multiline
             />
           </View>
         </View>
         {/* //Comment BOX END */}
 
         {/* //Photo */}
-        <View style={{marginVertical: 20}}>
+        <View style={{ marginVertical: 20 }}>
           <Text style={styles.photos}>{t('common:photos')}</Text>
           <View
             style={{
@@ -95,7 +96,7 @@ const NeedService = () => {
                 // backgroundColor: 'green',
               }}>
               <Image
-                style={{height: 30, width: 30}}
+                style={{ height: 30, width: 30 }}
                 source={require('../../assets/Icons/upload.png')}
               />
               <Text>{t('common:upload')}</Text>
@@ -114,10 +115,10 @@ const NeedService = () => {
               width: '90%',
               margin: 10,
             }}>
-            <TouchableOpacity onPress={() => working} style={styles1.container}>
+            <TouchableOpacity style={styles1.container}>
               <Image
                 resizeMode="contain"
-                style={{height: 30, width: 30}}
+                style={{ height: 30, width: 30 }}
                 source={require('../../assets/Icons/Group4036.png')}
               />
               <Text style={styles1.txtStyle}>
@@ -158,7 +159,7 @@ const NeedService = () => {
           </MapView>
         </View>
         {/* @Button here */}
-        <View style={{marginVertical: 30}}>
+        <View style={{ marginVertical: 30 }}>
           <ButtonComp
             onpress={() => setModalVisible(true)}
             name={t('common:sendrequest')}
@@ -180,10 +181,10 @@ const NeedService = () => {
               borderRadius: 20,
               flexWrap: 'wrap',
             }}>
-            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{ alignItems: 'center', justifyContent: 'center' }}>
               <Image
                 resizeMode="contain"
-                style={{height: 80, width: 80}}
+                style={{ height: 80, width: 80 }}
                 source={require('../../assets/Icons/Group16996.png')}
               />
               <Text
@@ -196,7 +197,7 @@ const NeedService = () => {
                 Sent Sucessfully
               </Text>
             </View>
-            <Text style={{textAlign: 'center', color: 'gray'}}>
+            <Text style={{ textAlign: 'center', color: 'gray' }}>
               your requst has been submitted Sucessfully{'\n'}We will notify you
               once admin approved your{'\n'}request,Thank you :)
             </Text>
@@ -213,20 +214,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
+    padding: 10
   },
   secoundContainer: {
     flex: 1,
-    backgroundColor: 'white',
-    margin: 10,
-    marginTop: 35,
+    margin: 8,
+    marginTop: 15,
     // marginBottom: 30,
   },
   InputContainer: {
-    height: 130,
+    height: '10%',
     borderWidth: 0.8,
     borderColor: color.gray,
     borderRadius: 10,
     padding: 5,
+
   },
   photos: {
     fontWeight: 'bold',
@@ -246,16 +248,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: Dimensions.get('screen').width - 20,
     height: Dimensions.get('screen').height / 2,
-
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: 9,
   },
 });
 

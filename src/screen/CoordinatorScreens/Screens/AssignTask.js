@@ -57,21 +57,21 @@ const AssignTask = () => {
         />
         {/* //Comment BOX */}
         <View style={styles.InputContainer}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image
               resizeMode="contain"
-              style={{height: 25, width: 25, left: 5}}
-              source={require('../../../assets/Icons/comment.png')}
+              style={{ height: 25, width: 25, left: 5 }}
+               source={require('../../../assets/Icons/comment.png')} 
             />
             <TextInput
-              style={{left: 10}}
+              style={{ left: 10, width: '100%', height: 70, textAlign: "justify" }}
               placeholderTextColor={'gray'}
               placeholder={t('common:comment')}
+              multiline
             />
           </View>
         </View>
         {/* //Comment BOX END */}
-
         {/* //Photo */}
         <View style={{marginVertical: 20}}>
           <Text style={styles.photos}>{t('common:photos')}</Text>
@@ -118,7 +118,7 @@ const AssignTask = () => {
               width: '90%',
               margin: 10,
             }}>
-            <TouchableOpacity onPress={() => working} style={styles1.container}>
+            <TouchableOpacity style={styles1.container}>
               <Image
                 resizeMode="contain"
                 style={{height: 30, width: 30}}
@@ -220,6 +220,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     margin: 10,
+    padding:10,
     // marginBottom: 30,
   },
   InputContainer: {
@@ -228,6 +229,7 @@ const styles = StyleSheet.create({
     borderColor: color.gray,
     borderRadius: 10,
     padding: 5,
+    marginTop:8
   },
   photos: {
     fontWeight: 'bold',
@@ -248,15 +250,6 @@ const styles = StyleSheet.create({
     width: Dimensions.get('screen').width - 20,
     height: Dimensions.get('screen').height / 2,
 
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: 9,
   },
 });
 

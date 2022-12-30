@@ -63,7 +63,7 @@ const ServiceDetails = () => {
         {/* //Comment ==============================================> */}
         <View style={{backgroundColor: 'white', marginVertical: 10}}>
           <Text style={styles.detailTitle}>Comments</Text>
-          <Text style={[styles.detailStyle, {fontWeight: '200'}]}>
+          <Text style={[styles.detailStyle, {fontWeight: '300'}]}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy
           </Text>
@@ -92,7 +92,7 @@ const ServiceDetails = () => {
               width: '90%',
               margin: 10,
             }}>
-            <TouchableOpacity onPress={() => working} style={styles1.container}>
+            <TouchableOpacity style={styles1.container}>
               <Image
                 resizeMode="contain"
                 style={{height: 30, width: 30}}
@@ -167,6 +167,7 @@ const styles = StyleSheet.create({
   },
   secoundContainer: {
     margin: 15,
+    padding:10,
     marginVertical: 20,
   },
   detailTitle: {
@@ -186,15 +187,8 @@ const styles = StyleSheet.create({
     width: Dimensions.get('screen').width - 20,
     height: Dimensions.get('screen').height / 2,
 
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: 9,
+ 
+   
   },
 });
 const styles1 = StyleSheet.create({

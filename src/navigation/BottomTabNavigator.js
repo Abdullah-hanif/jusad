@@ -81,6 +81,10 @@ const BottomTabNavigator = ({navigation}) => {
       <Tab.Screen
         options={{
           tabBarLabelStyle: {textAlign: 'center', fontSize: 12, bottom: 6},
+          headerTitle:'User',
+          headerTitleAlign:'center',
+          headerTintColor:'white',
+          headerStyle: {backgroundColor: color.primmary, height: 70,alignItems:'center'},
           tabBarStyle: {
             justifyContent: 'center',
             alignItems: 'center',
@@ -136,9 +140,8 @@ export const CoordinatorBottom = () => {
           return (
             <>
               <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate('UserStack', {screen: 'Notification'})
-                }>
+                
+                >
                 <Image
                   resizeMode="contain"
                   style={{height: 25, width: 25, right: 20}}

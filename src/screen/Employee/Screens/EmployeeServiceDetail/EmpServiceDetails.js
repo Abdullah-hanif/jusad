@@ -12,10 +12,10 @@ import React from 'react';
 import ButtonComp from '../../../../components/ButtonComp';
 
 // @maps
-import MapView, {Marker} from 'react-native-maps';
-import {color} from '../../../../theme';
+import MapView, { Marker } from 'react-native-maps';
+import { color } from '../../../../theme';
 
-const EmpServiceDetails = ({navigation}) => {
+const EmpServiceDetails = ({ navigation }) => {
   const mapRef = React.useRef();
 
   return (
@@ -33,7 +33,7 @@ const EmpServiceDetails = ({navigation}) => {
               <Text style={styles.detailTitle}>Employee</Text>
               <Text style={styles.detailStyle}>John Michel</Text>
             </View>
-            <View style={{marginVertical: 20}}>
+            <View style={{ marginVertical: 20 }}>
               <Text style={styles.detailTitle}>Task</Text>
               <Text style={styles.detailStyle}>Cleaning House</Text>
             </View>
@@ -44,7 +44,7 @@ const EmpServiceDetails = ({navigation}) => {
               <Text style={styles.detailTitle}>Date & Time</Text>
               <Text style={styles.detailStyle}>9th Jan,10:30PM</Text>
             </View>
-            <View style={{marginVertical: 20}}>
+            <View style={{ marginVertical: 20 }}>
               <Text style={styles.detailTitle}>Client</Text>
               <Text style={styles.detailStyle}>Sara Martin</Text>
             </View>
@@ -54,7 +54,7 @@ const EmpServiceDetails = ({navigation}) => {
         {/* //first END*/}
 
         {/* //HOME Address==============================================> */}
-        <View style={{backgroundColor: 'white'}}>
+        <View style={{ backgroundColor: 'white' }}>
           <Text style={styles.detailTitle}>Home Address</Text>
           <Text style={styles.detailStyle}>
             812 N Main St,Flora ,IL 62839,USA
@@ -62,16 +62,16 @@ const EmpServiceDetails = ({navigation}) => {
         </View>
         {/* //HOME Address==============================================>END */}
         {/* //Comment ==============================================> */}
-        <View style={{backgroundColor: 'white', marginVertical: 10}}>
+        <View style={{ backgroundColor: 'white', marginVertical: 10 }}>
           <Text style={styles.detailTitle}>Comments</Text>
-          <Text style={[styles.detailStyle, {fontWeight: '200'}]}>
+          <Text style={[styles.detailStyle, { fontWeight: '200' }]}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy
           </Text>
         </View>
         {/* //Comment==============================================>END */}
         {/* //PHOTOS ==============================================> */}
-        <View style={{marginVertical: 10}}>
+        <View style={{ marginVertical: 10 }}>
           <Text style={styles.detailStyle}>Photos</Text>
           <View
             style={{
@@ -85,7 +85,7 @@ const EmpServiceDetails = ({navigation}) => {
         </View>
         {/* //PHOTOS ==============================================>END */}
         {/* @MAP SCREEN  */}
-        <View style={{marginTop: 20}}>
+        <View style={{ marginTop: 20 }}>
           <View
             style={{
               position: 'absolute',
@@ -93,10 +93,10 @@ const EmpServiceDetails = ({navigation}) => {
               width: '90%',
               margin: 10,
             }}>
-            <TouchableOpacity onPress={() => working} style={styles1.container}>
+            <TouchableOpacity style={styles1.container}>
               <Image
                 resizeMode="contain"
-                style={{height: 30, width: 30}}
+                style={{ height: 30, width: 30 }}
                 source={require('../../../../assets/Icons/Group4036.png')}
               />
               <Text style={styles1.txtStyle}>
@@ -138,7 +138,7 @@ const EmpServiceDetails = ({navigation}) => {
           </Marker>
         </MapView>
       </View>
-      <View style={{margin: 10}}>
+      <View style={{ margin: 10 }}>
         <ButtonComp
           onpress={() => navigation.navigate('EmpServiceDetails1')}
           name="Start Service"
@@ -193,15 +193,6 @@ const styles = StyleSheet.create({
     width: Dimensions.get('screen').width - 20,
     height: Dimensions.get('screen').height / 2,
 
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: 9,
   },
 });
 const styles1 = StyleSheet.create({

@@ -1,11 +1,11 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
-import {color} from '../../../../../theme';
+import { color } from '../../../../../theme';
 
-const StatusContainerList = ({first, onpress}) => {
+const StatusContainerList = ({ first, onpress }) => {
   return (
     <TouchableOpacity onPress={onpress} style={styles.container}>
-      <View style={{alignItems: 'center'}}>
+      <View style={{ alignItems: 'center' }}>
         <View
           style={{
             height: 20,
@@ -52,8 +52,6 @@ const StatusContainerList = ({first, onpress}) => {
           },
           shadowOpacity: 0.18,
           shadowRadius: 1.0,
-
-          elevation: 1,
         }}>
         <View
           style={{
@@ -70,24 +68,24 @@ const StatusContainerList = ({first, onpress}) => {
               alignItems: 'center',
             }}>
             <View>
-              <Text style={{color: 'gray'}}>Client:</Text>
-              <Text style={{color: 'gray'}}>Service:</Text>
+              <Text style={{ color: 'gray' }}>Client:</Text>
+              <Text style={{ color: 'gray' }}>Service:</Text>
             </View>
-            <View style={{left: 10}}>
-              <Text style={{color: 'black', fontWeight: 'bold', right: 12}}>
+            <View style={{ left: 10 }}>
+              <Text style={{ color: 'black', fontWeight: 'bold', right: 12 }}>
                 Sara Martin
               </Text>
-              <Text style={{color: 'black', fontWeight: 'bold', right: 5}}>
+              <Text style={{ color: 'black', fontWeight: 'bold', right: 5 }}>
                 Cleaning House
               </Text>
             </View>
           </View>
-          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Image
-              style={{height: 30, width: 30}}
+              style={{ height: 30, width: 30 }}
               source={require('../../../../../assets/Icons/Group13150.png')}
             />
-            <Text style={{fontSize: 10, color: '#27da00'}}>In Prograss</Text>
+            <Text style={{ fontSize: 10, color: '#27da00' }}>In Progress</Text>
           </View>
         </View>
       </View>
