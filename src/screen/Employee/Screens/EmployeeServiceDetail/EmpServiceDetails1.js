@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   secoundContainer: {
-    margin: 10,
-    marginVertical: 20,
+    margin: 20,
+    marginVertical: 40,
     backgroundColor: 'white',
   },
   titleStyle: {

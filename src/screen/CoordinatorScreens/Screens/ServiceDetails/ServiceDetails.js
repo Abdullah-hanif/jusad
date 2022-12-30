@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   },
   secoundContainer: {
     margin: 15,
-    padding:10,
+    padding: 10,
     marginVertical: 20,
   },
   detailTitle: {
@@ -184,11 +184,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    width: Dimensions.get('screen').width - 20,
+    width: Dimensions.get('screen').width - 50,
     height: Dimensions.get('screen').height / 2,
-
- 
-   
   },
 });
 const styles1 = StyleSheet.create({

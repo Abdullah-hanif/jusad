@@ -81,10 +81,14 @@ const BottomTabNavigator = ({navigation}) => {
       <Tab.Screen
         options={{
           tabBarLabelStyle: {textAlign: 'center', fontSize: 12, bottom: 6},
-          headerTitle:'User',
-          headerTitleAlign:'center',
-          headerTintColor:'white',
-          headerStyle: {backgroundColor: color.primmary, height: 70,alignItems:'center'},
+          headerTitle: 'User',
+          headerTitleAlign: 'center',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: color.primmary,
+            height: 70,
+            alignItems: 'center',
+          },
           tabBarStyle: {
             justifyContent: 'center',
             alignItems: 'center',
@@ -139,9 +143,7 @@ export const CoordinatorBottom = () => {
         headerRight: () => {
           return (
             <>
-              <TouchableOpacity
-                
-                >
+              <TouchableOpacity>
                 <Image
                   resizeMode="contain"
                   style={{height: 25, width: 25, right: 20}}
@@ -154,6 +156,8 @@ export const CoordinatorBottom = () => {
       }}>
       <Tab.Screen
         options={{
+          tabBarItemStyle: {right: 25},
+
           tabBarLabel: 'Task',
           headerTitle: 'Coordinator',
           tabBarIcon: ({focused}) => {
@@ -200,6 +204,8 @@ export const CoordinatorBottom = () => {
       />
       <Tab.Screen
         options={{
+          tabBarItemStyle: {left: 20},
+
           tabBarLabel: 'Settings',
           headerTitle: 'Coordinator',
           tabBarIcon: ({focused}) => {
@@ -242,11 +248,13 @@ export const EmployeeBottom = () => {
           bottom: 6,
           color: 'gray',
         },
+
         tabBarStyle: {
-          justifyContent: 'center',
+          justifyContent: 'space-between',
           alignItems: 'center',
+          backgroundColor: 'white',
           height: 70,
-          padding: 10,
+          // padding: 10,
           paddingVertical: 5,
         },
 
@@ -269,8 +277,10 @@ export const EmployeeBottom = () => {
       }}>
       <Tab.Screen
         options={{
+          tabBarItemStyle: {right: 25},
           tabBarLabel: 'Task',
           headerTitle: 'Employee',
+
           tabBarIcon: ({focused}) => {
             return (
               <>
@@ -315,6 +325,7 @@ export const EmployeeBottom = () => {
       />
       <Tab.Screen
         options={{
+          tabBarItemStyle: {left: 20},
           tabBarLabel: 'Settings',
           headerTitle: 'Employee',
           tabBarIcon: ({focused}) => {

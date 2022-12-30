@@ -8,14 +8,17 @@ import {
   Modal,
 } from 'react-native';
 import React, {useState} from 'react';
+
+// @Components
 import TxtInputContainer from '../../../../components/TxtInputContainer';
 import ButtonComp from '../../../../components/ButtonComp';
+import AddExpenseTxtinput from '../../Components/AddExpenseTxtinput';
 
 const AddExpenses = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.secondContainer}>
-        <Text>AddExpenses</Text>
+        <Text style={styles.title}>AddExpenses</Text>
         {/* //Upload Container==================> */}
         <View style={styles.firstContainer}>
           <TouchableOpacity
@@ -23,6 +26,7 @@ const AddExpenses = ({navigation}) => {
               borderWidth: 0.7,
               borderColor: 'gray',
               padding: '10%',
+
               borderRadius: 10,
               justifyContent: 'center',
               alignItems: 'center',
@@ -38,8 +42,8 @@ const AddExpenses = ({navigation}) => {
         {/* //Upload Container==================> */}
         {/* //TextINPTS Container==================> */}
         <View style={{marginTop: 20}}>
-          <TxtInputContainer placeholder="Expense Name" />
-          <TxtInputContainer placeholder="Price" />
+          <AddExpenseTxtinput placeholder="Expense Name" />
+          <AddExpenseTxtinput placeholder="Price" />
         </View>
         {/* //TextINPTS Container==================>END */}
         <View style={{marginTop: 30}}>
@@ -61,8 +65,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   secondContainer: {
-    margin: 10,
-    marginVertical: 30,
+    margin: 20,
+    marginVertical: 40,
   },
   uplodImg: {
     height: 30,
@@ -82,5 +86,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.61)',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  title: {
+    fontWeight: 'bold',
+    color: 'black',
+    fontSize: 17,
   },
 });

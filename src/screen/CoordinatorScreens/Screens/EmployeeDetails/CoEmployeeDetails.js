@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   },
   secoundContainer: {
     margin: 10,
-    padding:15,
+    padding: 15,
     marginVertical: 25,
     backgroundColor: 'white',
   },
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    width: Dimensions.get('screen').width - 30,
+    width: Dimensions.get('screen').width - 50,
     height: Dimensions.get('screen').height / 2,
 
     // shadowColor: '#000',

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import ButtonComp from '../../../../components/ButtonComp';
+import {color} from '../../../../theme';
 
 const ExpenseDetails = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -21,7 +22,7 @@ const ExpenseDetails = () => {
         <View style={styles.servicetTimeContainer}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image
-              style={{height: 70, width: 70}}
+              style={{height: 70, width: 70, tintColor: color.primmary}}
               source={require('../../../../assets/Icons/Group40.png')}
             />
             <Text>Start Time</Text>
@@ -29,14 +30,14 @@ const ExpenseDetails = () => {
           </View>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image
-              style={{height: 70, width: 70}}
+              style={{height: 70, width: 70, tintColor: color.primmary}}
               source={require('../../../../assets/Icons/Group40.png')}
             />
             <Text>End Time</Text>
             <Text style={{color: 'black'}}>On Service</Text>
           </View>
         </View>
-        <View style={{marginVertical: '20%'}}>
+        <View style={{marginVertical: '10%'}}>
           <View
             style={{
               flexDirection: 'row',
@@ -132,8 +133,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   secoundContainer: {
-    margin: 10,
-    marginVertical: 20,
+    margin: 20,
+    marginVertical: 40,
     backgroundColor: 'white',
   },
   titleStyle: {

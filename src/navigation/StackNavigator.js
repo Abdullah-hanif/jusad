@@ -147,7 +147,8 @@ const CoordintorStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('CoordinatorBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -168,7 +169,8 @@ const CoordintorStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('CoordinatorBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -189,7 +191,8 @@ const CoordintorStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('CoordinatorBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -210,7 +213,8 @@ const CoordintorStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('CoordinatorBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -244,7 +248,8 @@ const EmployeeStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('EmployeeBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -265,7 +270,8 @@ const EmployeeStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('EmployeeBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -287,7 +293,8 @@ const EmployeeStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('EmployeeBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
@@ -308,7 +315,8 @@ const EmployeeStack = () => {
           headerLeft: () => {
             return (
               <>
-                <TouchableOpacity onPress={() => nav.goBack()}>
+                <TouchableOpacity
+                  onPress={() => nav.navigate('EmployeeBottom')}>
                   <Image
                     resizeMode="contain"
                     style={{height: 30, width: 30}}
