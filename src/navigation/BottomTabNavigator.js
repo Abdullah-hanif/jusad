@@ -1,9 +1,9 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 
 // @Navigtions
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {color} from '../theme';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { color } from '../theme';
 
 // @Screens
 import MytimeLine from '../screen/MyTimeline/MytimeLine';
@@ -21,15 +21,15 @@ import EmployeeSettings from '../screen/Employee/Screens/EmployeeSettings/Employ
 
 const Tab = createBottomTabNavigator();
 //@USER BOTTOM NAVIGATIOR
-const BottomTabNavigator = ({navigation}) => {
+const BottomTabNavigator = ({ navigation }) => {
   return (
     <Tab.Navigator>
       <Tab.Screen
         options={{
           headerTitle: 'User',
           headerTitleAlign: 'center',
-          headerTitleStyle: {fontWeight: 'bold', color: 'white'},
-          headerStyle: {backgroundColor: color.primmary, height: 70},
+          headerTitleStyle: { fontWeight: 'bold', color: 'white' },
+          headerStyle: { backgroundColor: color.primmary, height: 70 },
           tabBarLabel: 'My Timeline',
           tabBarLabelStyle: {
             textAlign: 'center',
@@ -45,7 +45,7 @@ const BottomTabNavigator = ({navigation}) => {
             paddingVertical: 5,
           },
 
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <>
                 <Image
@@ -67,7 +67,7 @@ const BottomTabNavigator = ({navigation}) => {
                   onPress={() => navigation.navigate('Notification')}>
                   <Image
                     resizeMode="contain"
-                    style={{height: 25, width: 25, right: 20}}
+                    style={{ height: 25, width: 25, right: 20 }}
                     source={require('../assets/Icons/Group10609.png')}
                   />
                 </TouchableOpacity>
@@ -80,7 +80,7 @@ const BottomTabNavigator = ({navigation}) => {
       />
       <Tab.Screen
         options={{
-          tabBarLabelStyle: {textAlign: 'center', fontSize: 12, bottom: 6},
+          tabBarLabelStyle: { textAlign: 'center', fontSize: 12, bottom: 6 },
           headerTitle: 'User',
           headerTitleAlign: 'center',
           headerTintColor: 'white',
@@ -101,7 +101,7 @@ const BottomTabNavigator = ({navigation}) => {
               <>
                 <Image
                   resizeMode="contain"
-                  style={{height: 25, width: 25}}
+                  style={{ height: 25, width: 25 }}
                   source={require('../assets/Icons/Settings.png')}
                 />
               </>
@@ -124,8 +124,8 @@ export const CoordinatorBottom = () => {
         // tabBarLabel: 'My Timeline',
         // headerTitle: 'Coordinator',
         headerTitleAlign: 'center',
-        headerTitleStyle: {fontWeight: 'bold', color: 'white'},
-        headerStyle: {backgroundColor: color.primmary, height: 70},
+        headerTitleStyle: { fontWeight: 'bold', color: 'white' },
+        headerStyle: { backgroundColor: color.primmary, height: 70 },
         tabBarLabelStyle: {
           textAlign: 'center',
           fontSize: 12,
@@ -146,7 +146,7 @@ export const CoordinatorBottom = () => {
               <TouchableOpacity>
                 <Image
                   resizeMode="contain"
-                  style={{height: 25, width: 25, right: 20}}
+                  style={{ height: 25, width: 25, right: 20 }}
                   source={require('../assets/Icons/Group10609.png')}
                 />
               </TouchableOpacity>
@@ -156,11 +156,11 @@ export const CoordinatorBottom = () => {
       }}>
       <Tab.Screen
         options={{
-          tabBarItemStyle: {right: 25},
+          tabBarItemStyle: { right: 25 },
 
           tabBarLabel: 'Task',
           headerTitle: 'Coordinator',
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <>
                 <Image
@@ -183,7 +183,7 @@ export const CoordinatorBottom = () => {
         options={{
           tabBarLabel: 'Employees',
           headerTitle: 'Coordinator',
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <>
                 <Image
@@ -204,11 +204,11 @@ export const CoordinatorBottom = () => {
       />
       <Tab.Screen
         options={{
-          tabBarItemStyle: {left: 20},
+          tabBarItemStyle: { left: 20 },
 
           tabBarLabel: 'Settings',
           headerTitle: 'Coordinator',
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <>
                 <Image
@@ -233,15 +233,15 @@ export const CoordinatorBottom = () => {
 
 //@Employee BOTTOM NAVIGATIOR
 
-export const EmployeeBottom = () => {
+export const EmployeeBottom = ({ navigation }) => {
   return (
     <Tab.Navigator
       screenOptions={{
         // tabBarLabel: 'My Timeline',
         // headerTitle: 'Coordinator',
         headerTitleAlign: 'center',
-        headerTitleStyle: {fontWeight: 'bold', color: 'white'},
-        headerStyle: {backgroundColor: color.primmary, height: 70},
+        headerTitleStyle: { fontWeight: 'bold', color: 'white' },
+        headerStyle: { backgroundColor: color.primmary, height: 70 },
         tabBarLabelStyle: {
           textAlign: 'center',
           fontSize: 12,
@@ -262,12 +262,11 @@ export const EmployeeBottom = () => {
           return (
             <>
               <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate('UserStack', {screen: 'Notification'})
-                }>
+                onPress={() => navigation.navigate('Notification')}>
+
                 <Image
                   resizeMode="contain"
-                  style={{height: 25, width: 25, right: 20}}
+                  style={{ height: 25, width: 25, right: 20 }}
                   source={require('../assets/Icons/Group10609.png')}
                 />
               </TouchableOpacity>
@@ -277,11 +276,11 @@ export const EmployeeBottom = () => {
       }}>
       <Tab.Screen
         options={{
-          tabBarItemStyle: {right: 25},
+          tabBarItemStyle: { right: 25 },
           tabBarLabel: 'Task',
           headerTitle: 'Employee',
 
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <>
                 <Image
@@ -300,7 +299,7 @@ export const EmployeeBottom = () => {
         name="EmployeeTask"
         component={EmployeeTask}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         options={{
           tabBarLabel: 'Employees',
           headerTitle: 'Employee',
@@ -322,13 +321,13 @@ export const EmployeeBottom = () => {
         }}
         name="EmployeesTab"
         component={EmployeesTab}
-      />
+      /> */}
       <Tab.Screen
         options={{
-          tabBarItemStyle: {left: 20},
+          tabBarItemStyle: { left: 20 },
           tabBarLabel: 'Settings',
           headerTitle: 'Employee',
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <>
                 <Image
